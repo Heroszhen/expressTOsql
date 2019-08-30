@@ -1,12 +1,15 @@
 const express = require('express');
 const app = new express();
 
+const db = require('./db.js');
+
 app.use(express.json());
 
-app.get("/",function(req,res){
-	//res.send('hello world');
-	var person = {"name":"zhen","age":32};
-	res.send(person);
+app.get("/",function(req,res,next){
+	db.query('select * from abonne',(error,result)=>{
+		if(error) throw error;
+		res.send(result);
+	});
 });
 
 app.listen(3000);
