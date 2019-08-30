@@ -1,0 +1,6 @@
+Express to sql
+https://www.youtube.com/watch?v=LVfH5FDOa3o&list=PLMLYms3iYS8HNGhsn6MS5oLRGGYe61fSn&index=74&t=751s
+
+npm init -y
+npm i express mysql
+npm i -D nodemon
