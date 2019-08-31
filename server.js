@@ -7,7 +7,7 @@ app.use(express.json());
 
 app.get("/",function(req,res,next){
 	db.query('select * from abonne',(error,result)=>{
-		if(error) throw error;
+		if(error) res.send(error);
 		let myreturn = {
 			"response":"ok",
 			"data":result
